@@ -26,15 +26,15 @@ reprovaNota(A,N,F) :- nota(A,N), falta(A,F),
 
 
 listaAprova :- write("APROVADOS"),nl,
-        aprovado(A,N,F),write(A),write(N),write(F),nl,nl.
+        aprovado(A,N,F),write(A),write(N),write(F),nl,nl,fail. listaAprova.
 
 
 listaFalta:-  write("REPROVADOS POR FALTA"),nl,
         reprovaFalta(A,N,F),
-        write(A),write(N),write(F),nl,nl.
+        write(A),write(N),write(F),nl,nl, fail. listaFalta.
 
 listaNota :- write("REPROVADOS POR NOTA"),nl,
-        reprovaNota(A,N,F),write(A),write(N),write(F),nl,nl.
+        reprovaNota(A,N,F),write(A),write(N),write(F),nl,nl, fail. listaNota.
 
 
 
